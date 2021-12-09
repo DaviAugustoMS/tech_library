@@ -1,0 +1,10 @@
+.bg-top {
+  background: url("../../assets/bg_stripes.svg") repeat-x;
+  width: 100%;
+  height: 55.5vh;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
