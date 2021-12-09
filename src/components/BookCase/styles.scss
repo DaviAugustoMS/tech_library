@@ -1,0 +1,54 @@
+.book-container {
+  position: relative;
+  width: 100vw;
+
+  &__book-case {
+    position: absolute;
+    background: url(../../assets/bookcase.svg) no-repeat center center;
+    background-size: auto;
+    width: 490px;
+    height: 400px;
+    top: -240px;
+    left: 10%;
+
+    &__book-right {
+      width: 338px;
+      height: 88px;
+      margin-left: 26px;
+      margin-top: 110px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__book-left {
+      width: 338px;
+      height: 88px;
+      margin-left: 26px;
+      margin-top: 33px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__book-case {
+      width: 690px;
+      top: -260px;
+      left: 30%;
+      &__book-right {
+        width: 450px;
+        height: 118px;
+        margin-left: 54px;
+        margin-top: 80px;
+      }
+
+      &__book-left {
+        width: 450px;
+        height: 118px;
+        margin-left: 54px;
+        margin-top: 42px;
+      }
+    }
+  }
+}
