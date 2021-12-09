@@ -1,0 +1,8 @@
+.container-book {
+  width: 32px;
+  height: 90px;
+  @media (min-width: 768px) {
+    width: 42px;
+    height: 120px;
+  }
+}
