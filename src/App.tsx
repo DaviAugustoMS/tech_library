@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.scss";
 import "./components/layout/backgroundTop.scss";
 import "./components/layout/backgroundBottom.scss";
@@ -9,6 +9,7 @@ import { Clock } from "./components/Clock";
 import books from "./utils/books";
 
 function App() {
+  const [oclock, setOclock] = useState(false);
   const [booksState, setBooksState] = useState<any>(books);
   const [activeAbc, setActiveAbc] = useState(false);
   const [activeColors, setActiveColors] = useState(false);
@@ -46,10 +47,14 @@ function App() {
     setActiveSizes(false);
   };
 
+  useEffect(() => {
+    setOclock(true);
+  }, []);
+
   return (
     <div className="App">
       <div className="bg-top">
-        <Clock />
+        <Clock oclock={oclock} setOclock={setOclock} />
         <Logo />
       </div>
       <div className="bg-bottom">
